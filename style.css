@@ -1,0 +1,106 @@
+
+.container  {
+    margin: 0 auto;
+    border: 2px solid black;
+    width: 400px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   justify-content: space-around;
+}
+.dice {
+    list-style: none;
+    padding: 8px;
+    width: 80px;
+    height: 80px;
+    border: solid 4px #000;
+    border-radius: 20px;
+    box-sizing: border-box;
+
+    display: inline-flex;
+    vertical-align: top;
+    margin: 25px;
+}
+
+
+
+
+.dice__point::before {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: #000;
+    border-radius: 50%;
+}
+
+
+.dice_one {
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/*Второй кубик*/
+.second_dice {
+    justify-content: left;
+}
+.dice_two {
+    justify-content: space-between;
+}
+
+.dice_two .dice__point:nth-child(1) {
+    align-self: flex-end;
+}
+
+/*Третий кубик*/
+.dice_three { 
+    justify-content: space-between;
+}
+
+.dice_three .dice__point:nth-child(1) {
+    align-self: flex-end;
+}
+
+.dice_three .dice__point:nth-child(2) {
+    align-self: center;
+}
+
+
+/*Четвертый кубик*/
+.dice_four {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.dice_four .dice__point {
+    width: 50%;
+}
+
+.dice_four .dice__point:nth-child(even) {
+    text-align: right;
+}
+
+
+/*Пятый кубик*/
+.dice_five {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.dice_five .dice__point:nth-child(3) {
+    width: 100%;
+    text-align: center;
+}
+
+
+/*Шестой кубик*/
+.dice_six {
+    flex-flow: wrap column;
+    justify-content: space-between;
+    align-content: space-between;
+}
